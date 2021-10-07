@@ -93,7 +93,7 @@ function mouseMove(evt){
     }
     gunCursorPos.x = mouse.x - (gunCursorPos.w *0.5)
     gunCursorPos.y = mouse.y - (gunCursorPos.h *0.5)
-    console.log(`${mouse.x} , ${mouse.y}`)
+    // console.log(`${mouse.x} , ${mouse.y}`)
     gunCursor.style.left = gunCursorPos.x + 'px'
     gunCursor.style.top = gunCursorPos.y + 'px'
 

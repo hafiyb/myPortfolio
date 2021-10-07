@@ -75,9 +75,6 @@ var scoreUp = new Howl({
     src: ['assets/sounds/point.wav'],
   });
 
-  gunshot.play()
-  scoreUp.play()
-
 function soundGun(){
     gunshot.play()
 }
@@ -110,8 +107,6 @@ var ducks = document.getElementsByClassName('game-ducks')
 var gameMode = false
 var gameScore = document.getElementById('game-score')
 var score = 0
-
-
 
 function startGame(){
 

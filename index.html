@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="I am a software engineer, I do front end development and 3D-printing">
+    <meta name="keywords" content="HTML, HTML5, CSS, CSS3, JavaScript, 3D, Printing, 3D-Printing, Maker">
+    <meta name="author" content="Hafiy Basir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@hafiyb2">
+    <meta name="twitter:title" content="Page Title">
+    <meta name="twitter:description" content="I am a software engineer, I do front end development and 3D-printing">
+    <meta name="twitter:creator" content="@author_handle">
+    <!-- Twitter Summary card images must be at least 120x120px -->
+    <meta name="twitter:image" content="http://www.example.com/image.jpg">
+    
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Hafiy, Software Engineer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="I am a software engineer, I do front end development and 3D-printing" />
+    <meta property="og:site_name" content="Site Name, i.e. Moz" />
+    <meta property="fb:admins" content="Facebook numeric ID" /> 
+
+    <title>Hafiy Basir</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <img src="assets/Frame 1.png" onclick=toTop()>
+        <div>
+            <i id="navbutton" class="fas fa-bars" onclick="navClicked()"></i>
+        </div>
+        <div id="nav-desktop">
+            <a href="#intro">
+                <div class="navbuttons">
+                    About
+                </div>
+            </a>
+            <a href="#projects">
+                <div class="navbuttons">
+                    Projects
+                </div>
+            </a>
+            <a href="#contacts">
+                <div class="navbuttons">
+                    Contacts
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <div id="score-holder">
+        <h1 id="hi-score" class="animate__animated"><span id="game-score" onclick="startGame()">PLAY?</span></h1>
+    </div>
+    
+
+    <div id="nav-expand" class="animate__animated animate__fadeOutUpBig">
+        <a href="#intro" onclick="navClicked()"><h2>About</h2></a>
+        <a href="#projects" onclick="navClicked()"><h2>Projects</h2></a>
+        <a href="#contacts" onclick="navClicked()"><h2>Contact</h2></a>
+    </div>
+
+    <div id="app">
+        <section draggable="false" id="photo">
+            <div  draggable="false" id="banner">
+                <div draggable="false" id="bg-img" class="animate__animated"></div>
+                <div draggable="false" id="gradient"></div>
+                <img src="assets/images/nobg2.png" id="my-img" class="animate__animated" alt="">
+                <!-- <img src="assets/images/nobg3.png" id="my-img2" class="animate__animated animate__flipOutY" alt=""> -->
+                <div class="scrolling-text not-ducks"></div>
+                <div class="scrolling-text not-ducks">Testttt</div>
+                <div class="scrolling-text not-ducks">Testttt</div>
+                <div class="scrolling-text not-ducks">Testttt</div>
+                <div class="scrolling-text not-ducks">Testttt</div>
+                <div class="scrolling-text not-ducks">Testttt</div>
+                <div class="scrolling-text not-ducks">Testttt</div>
+                <img draggable="false" src="assets/images/duck.gif" class="animate__animated game-ducks" onclick='duckShot(0)' alt="">
+                <img draggable="false" src="assets/images/duck.gif" class="animate__animated game-ducks" onclick='duckShot(1)' alt="">
+                <img draggable="false" src="assets/images/duck.gif" class="animate__animated game-ducks" onclick='duckShot(2)' alt="">
+                <img draggable="false" src="assets/images/duck.gif" class="animate__animated game-ducks" onclick='duckShot(3)'' alt="">
+                <!-- <h3 class="scrolling-text">Testttt</h3>
+                <h3 class="scrolling-text">Testttt</h3>
+                <h3 class="scrolling-text">Testttt</h3> -->
+            </div>
+        </section>
+        <section id="intro">
+            
+            <h1>Hafiy Basir</h1>
+            <p>(Muhammad Hafiy Bin Muhamad Basir)</p>
+            <h3>Hello there! I'm Hafiy, and I'm a software engineer based in Kuala Lumpur.</h3>
+            <div id="intro-para">
+                <p>Full-time software engineer at INVOKE</p>
+                <p>Over 2 months of training on Freecodecamp.org</p>
+                <p>Currently undergoing 3 months of coding bootcamp (<span id="percent"></span>% completed)</p>
+                <p>I also do FDM 3D-Printing, bringing 3D designs into reality</p>
+            </div>
+            <div id="intro-icon-container">
+                <div class="intro-icons">
+                    <div class="animate__animated animate-icon"><i class="fab fa-html5"></i></div>
+                    <div class="animate__animated animate-icon"><i class="fab fa-css3-alt"></i></div>
+                    <div class="animate__animated animate-icon"><i class="fab fa-js"></i></div>
+                </div>
+                <div class="intro-icons">
+                    <div class="animate__animated animate-icon" style="order: 2"><i class="fab fa-bootstrap"></i></div>
+                    <div class="animate__animated animate-icon" style="order: 1"><i class="fab fa-sass"></i></div>
+                    <!-- <div><i class="fab fa-bootstrap"></i></div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1>Check out some of my previous projects</h1>
+            <div id="project-card-container">
+                <!-- <a href="https://hafiyb.github.io/Day13/">
+                    <div class="project-card">
+                    <img src="assets/images/projects/chat.png" alt="">
+                    <div class="project-card-txt">
+                        <h3>Chat room</h3>
+                        <p>This chat room utilizes firebase to store messages and user information</p>
+                    </div>
+                </div>
+            </a> -->
+                
+            </div>
+            
+        </section>
+
+        <!-- <section id="certs">
+            <h1>Certified awesome!</h1>
+        </section> -->
+
+        <section id="contacts">
+            <h1>Hit me up</h1>
+            <div id="my-contacts">
+                <h3><i class="fas fa-phone"></i>010 896 0641</h3>
+                <h3><i class="fas fa-envelope"></i>hafiyb@gmail.com</h3>
+                <h3><i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/hafiy-basir-036036196">Visit my linkedIn page</a></h3>
+            </div>
+            <p>Or you can leave your information below and let me do the hard work</p>
+            <div id="contact-info">
+                <p>
+                    I am <br><input type="text" id="their-name" placeholder="Boaty McBoatFace"><br>
+                    Please contact me through my email, <br><input type="text" id="their-email" placeholder="boat@boatmail.com"><br>
+                    or my phone, <br><input type="text" id="their-phone" placeholder="Optional">
+                </p>
+                <button id="submit" onclick="sendData()">Send !</button>
+            </div>
+        </section>
+            
+
+    <audio class="sound" src="assets/sounds/gun.wav"></audio>
+    <audio class="sound" src="assets/sounds/point.wav"></audio>
+    </div>
+
+</body>
+<!--firebase-app-->
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script> 
+<!--firebase-real-time-->
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<script src="script.js"></script>
+
+</html>

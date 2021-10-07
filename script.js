@@ -151,8 +151,9 @@ var gameMode = false
 var gameScore = document.getElementById('game-score')
 var score = 0
 
-function startGame(){
 
+function startGame(){
+if(gameMode == false){
     banner.onclick = soundGun
 
     updateScore()
@@ -187,7 +188,7 @@ function startGame(){
     },500)
 
     gameMode = true
-
+}
 }
 
 

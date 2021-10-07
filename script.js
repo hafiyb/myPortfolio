@@ -71,6 +71,37 @@ var projects = [{
     link: "https://hafiyb.github.io/day11/"
 }
 ]
+//=========================================================================================================================================================
+//CURSOR
+//=========================================================================================================================================================
+
+var gunCursor = document.getElementById('cursor-gun')
+window.addEventListener("mousemove", mouseMove)
+
+var gunCursorPos = {
+    x:0, 
+    y:0,
+    w:50,
+    h:50
+}
+
+function mouseMove(evt){
+    console.log(evt)
+    var mouse = {
+        x :evt.pageX - bgImg.offsetLeft,
+        y :evt.pageY - bgImg.offsetTop
+    }
+    gunCursorPos.x = mouse.x - (gunCursorPos.w *0.5)
+    gunCursorPos.y = mouse.y - (gunCursorPos.h *0.5)
+    console.log(`${mouse.x} , ${mouse.y}`)
+    gunCursor.style.left = gunCursorPos.x + 'px'
+    gunCursor.style.top = gunCursorPos.y + 'px'
+
+    if(mouse.y >= 60 && mouse.y <= 660 && gameMode == true){
+        gunCursor.style.display = 'block'
+    } else gunCursor.style.display = 'none'
+
+}
 
 //=========================================================================================================================================================
 //SOUND CONTROL
@@ -132,7 +163,7 @@ function startGame(){
     setTimeout(function(){
         
         bgImg.classList.add('animate__flash')
-        banner.style.cursor = 'crosshair'
+        banner.style.cursor = 'none'
 
         for(let i = 0; i < scrollText.length ; i++){
             textSpeed[i] = 0
@@ -174,7 +205,7 @@ function duckShot(num){
             setTimeout(function(){
                 ducks[num].classList.remove('animate__fadeOutDownBig')
             },100)
-        },300)
+        },500)
     },200)
 
     updateScore()

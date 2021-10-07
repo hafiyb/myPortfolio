@@ -49,6 +49,14 @@ p{
     color: var(--txtcolor-pri);
 }
 
+#cursor-gun{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+
 #app{
     overflow-x: hidden;
 }
@@ -92,8 +100,8 @@ p{
 
 .game-ducks{
     display: none;
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     user-select: none;
 }
 

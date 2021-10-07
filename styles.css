@@ -304,6 +304,10 @@ nav i{
     font-family: 'Press Start 2P', cursive;
 }
 
+.project-card-anchor{
+    margin: 10px 0;
+}
+
 .project-card{
     display: flex;
     flex-direction: row;
@@ -331,10 +335,15 @@ nav i{
 
 .project-card-txt{
     width: 50%;
+    padding: 10px 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.project-card-txt h3{
+    margin: 0 0 5px 0;
 }
 
 .card-left{

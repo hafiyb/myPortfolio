@@ -25,7 +25,11 @@ const firebaseConfig = {
 
 console.log(window.innerWidth)
 
-  
+//=========================================================================================================================================================
+//PERCENTAGE
+//=========================================================================================================================================================  
+
+
 var now = new Date();
 var start = new Date(now.getFullYear(), 0, 0);
 var diff = now - start;
@@ -39,34 +43,38 @@ window.addEventListener("scroll", onScroll)
 var projects = [{
     title: "Chat room",
     desc: "This chat room utilizes firebase to store messages and user information",
-    imgSrc: "assets/images/projects/chat.png",
+    imgSrc: "assets/images/projects/resized/chat.png",
     link: "https://hafiyb.github.io/Day13/"
 },
 {
     title: "Weather app",
     desc: "A weather app to demonstrate the use of OpenWeatherMap API",
-    imgSrc: "assets/images/projects/weather.png",
+    imgSrc: "assets/images/projects/resized/weather.png",
     link: "https://hafiyb.github.io/Day14/"
 },
 {
     title: "Music player",
     desc: "A simple music player playing some of my favourite tracks",
-    imgSrc: "assets/images/projects/music1.png",
+    imgSrc: "assets/images/projects/resized/music.png",
     link: "https://hafiyb.github.io/day9/"
 },
 {
     title: "Video player",
     desc: "An attempt at a web video player using CSS grid",
-    imgSrc: "assets/images/projects/video1.png",
+    imgSrc: "assets/images/projects/resized/video.png",
     link: "https://hafiyb.github.io/day8/"
 },
 {
     title: "Piano",
     desc: "A simplistic web piano demonstrating the use of keypresses and howler.js",
-    imgSrc: "assets/images/projects/piano1.png",
+    imgSrc: "assets/images/projects/resized/piano.png",
     link: "https://hafiyb.github.io/day11/"
 }
 ]
+
+//=========================================================================================================================================================
+//SOUND CONTROL
+//=========================================================================================================================================================
 
 var gunshot = new Howl({
     src: ['assets/sounds/gun.wav'],
@@ -82,6 +90,10 @@ function soundGun(){
 function soundScore(){
     scoreUp.play()
 }
+
+//=========================================================================================================================================================
+//FLASHING PLAY BUTTON
+//=========================================================================================================================================================
 
 var hiScore = document.getElementById('hi-score')
 
@@ -261,32 +273,6 @@ setInterval(function(){
 },1000)
 
 
-// var myImg = document.getElementById('my-img')
-// var myImg2 = document.getElementById('my-img2')
-// var toggleImg = false
-
-// setInterval(function(){
-//     if(toggleImg == false){
-//         toggleImg = true
-//         myImg.classList.remove('animate__flipInY')
-//         myImg.classList.add('animate__flipOutY')
-//         // myImg.style.display = 'none'
-
-//         myImg2.classList.remove('animate__flipOutY')
-//         myImg2.classList.add('animate__flipInY')
-//         // myImg2.style.display = 'block'
-//     } else {
-//         toggleImg = false
-//         myImg.classList.remove('animate__flipOutY')
-//         myImg.classList.add('animate__flipInY')
-//         // myImg.style.display = 'block'
-
-//         myImg2.classList.remove('animate__flipInY')
-//         myImg2.classList.add('animate__flipOutY')
-//         // myImg2.style.display = 'none'
-//     }
-// }, 5000)
-
 
 //=========================================================================================================================================================
 //NAV CONTROL
@@ -364,9 +350,6 @@ for(let i = 0 ; i< projects.length;i++){
 var itemList = document.querySelectorAll('.project-card-anchor');
 
 function onScroll(evt){
-
-    // console.log("window scrollY : ", window.scrollY)
-    // console.log(itemList[0].offsetTop)
 
     for(let i = 0; i < itemList.length; i += 1){
         if(window.scrollY >= itemList[i].offsetTop - 600){

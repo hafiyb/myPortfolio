@@ -305,6 +305,7 @@ function navClicked(){
         navClickFlag = false
         document.querySelector('body').style.overflow = 'auto'
         navIcon.style.transform = 'rotate(0deg) scale(1.5)'
+        hiScore.style.display = 'block'
     } else {
         navMenu.style.display = 'flex'
         navMenu.classList.remove("animate__fadeOutUpBig")
@@ -312,6 +313,7 @@ function navClicked(){
         navClickFlag = true
         document.querySelector('body').style.overflow = 'hidden'
         navIcon.style.transform = 'rotate(-90deg) scale(2)'
+        hiScore.style.display = 'none'
     }
 }
 
